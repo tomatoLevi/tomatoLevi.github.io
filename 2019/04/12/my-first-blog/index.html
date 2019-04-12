@@ -237,8 +237,13 @@
 <font face="微软雅黑" size="4"><br>在新弹出的页面中<br>随便输如一个title名字<br>将id_rsa.pub文件中的内容全选复制到下方框内<br>点击add ssh key<br>之后会让你输入一次github的密码进行确认<br></font>
 
 <p><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7q7bu1j20qu0bzt8v.jpg" alt="29"></p>
-<font face="微软雅黑" size="4"><br>之后打开Hexo的配置文件<br>拉到最下面 将内容修改为如下<br>homraL替换成你自己的github名字<br>deploy:<br>  type: git<br>  repository: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:homraL/homraL.github.io.git<br>  branch: master<br></font>
+<font face="微软雅黑" size="4"><br>之后打开Hexo的配置文件<br>拉到最下面 将内容修改为如下<br>homraL替换成你自己的github名字<br></font>
 
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">deploy</span><span class="token punctuation">:</span>
+<span class="token attr-name">  type</span><span class="token punctuation">:</span> <span class="token attr-value">git</span>
+<span class="token attr-name">  repository</span><span class="token punctuation">:</span> <span class="token attr-value">git@github.com:homraL/homraL.github.io.git</span>
+<span class="token attr-name">  branch</span><span class="token punctuation">:</span> <span class="token attr-value">master</span>
+</code></pre>
 <p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7qlzbaj20lj04tweg.jpg" alt="30"></p>
 <font face="微软雅黑" size="4"><br>仓库地址可以在你的github仓库主页找到<br>点击Clone or download<br>因为我们选用的是SSH方式 所以选择use SSH<br>然后复制下方地址到repository后面即可<br>注意：每一个属性后面的空格不可删掉<br></font>
 
