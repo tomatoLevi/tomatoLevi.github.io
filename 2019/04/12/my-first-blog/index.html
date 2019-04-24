@@ -228,10 +228,13 @@
 <font face="微软雅黑" size="4"><br>之后保存再次执行<br>hexo g<br>hexo s<br>就可以看到新的主题了<br>没有效果的可以先清理下在启动<br>hexo clean<br></font>
 
 <p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7nz906j20w00fru0f.jpg" alt="26"></p>
-<h4 id="8、生成SSH密钥添加到GitHub"><a href="#8、生成SSH密钥添加到GitHub" class="headerlink" title="8、生成SSH密钥添加到GitHub"></a>8、生成SSH密钥添加到GitHub</h4><font face="微软雅黑" size="4"><br>只有配置好SSH密钥后 我们才可以通过git操作实现本地代码库与Github代码库同步<br>在myblog文件夹下输入命令<br></font><br><code>properties
-git config --global user.name &quot;yourname&quot;
-git config --global user.email &quot;youremail&quot;
-ssh-keygen -t rsa -C &quot;youremail&quot;</code><br><font face="微软雅黑" size="4"><br>yourname输入你的GitHub用户名<br>youremail输入你GitHub的邮箱<br>之后一直回车即可<br>可在用户名文件夹下生成key<br>C:\Users\用户名.ssh<br></font>
+<h4 id="8、生成SSH密钥添加到GitHub"><a href="#8、生成SSH密钥添加到GitHub" class="headerlink" title="8、生成SSH密钥添加到GitHub"></a>8、生成SSH密钥添加到GitHub</h4><font face="微软雅黑" size="4"><br>只有配置好SSH密钥后 我们才可以通过git操作实现本地代码库与Github代码库同步<br>在myblog文件夹下输入命令<br></font>
+
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">git</span> <span class="token attr-value">config --global user.name "yourname"</span>
+<span class="token attr-name">git</span> <span class="token attr-value">config --global user.email "youremail"</span>
+<span class="token attr-name">ssh-keygen</span> <span class="token attr-value">-t rsa -C "youremail"</span>
+</code></pre>
+<font face="微软雅黑" size="4"><br>yourname输入你的GitHub用户名<br>youremail输入你GitHub的邮箱<br>之后一直回车即可<br>可在用户名文件夹下生成key<br>C:\Users\用户名.ssh<br></font>
 
 <p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7oi8jgj20lo07zmxa.jpg" alt="27"></p>
 <font face="微软雅黑" size="4"><br>id_rsa是你这台电脑的私人秘钥 不能给别人看的<br>id_rsa.pub是公共秘钥 可以随便给别人看<br>我们要把公钥放在GitHub上 这样当你链接GitHub自己的账户时<br>它就会根据公钥匹配你的私钥 当能够相互匹配时<br>才能够顺利的通过git上传你的文件到GitHub上<br>我们打开github官网<br>找到右上角头像下的settings<br>选择SSH and GPG keys<br>点击New SSH key创建新的SSHkey<br></font>
