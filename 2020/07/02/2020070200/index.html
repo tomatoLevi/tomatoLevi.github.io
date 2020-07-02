@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    Welcome to Homra
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/hls.min.js"></script>
+    <script src="/js/webtorrent.min.js"></script>
+    <script src="/js/APlayer.min.js"></script>
+    <script src="/js/DPlayer.min.js"></script>
+    <script src="/js/Meting.min.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.1"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_tomorrow.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<link rel="stylesheet" href="/css/APlayer.min.css" />
+<link rel="stylesheet" href="/css/DPlayer.min.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">吠舞罗</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">历史</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2020/07/">July 2020</a></li><li><a class="archive-link" href="/archives/2020/06/">June 2020</a></li><li><a class="archive-link" href="/archives/2020/04/">April 2020</a></li><li><a class="archive-link" href="/archives/2019/11/">November 2019</a></li><li><a class="archive-link" href="/archives/2019/09/">September 2019</a></li><li><a class="archive-link" href="/archives/2019/04/">April 2019</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/group/" title="友链">
+		                友链
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/playlist/" title="歌单">
+		                歌单
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/about/" title="关于">
+		                关于
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/miccall" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://wx4.sinaimg.cn/large/cc586804ly1ggczkf3o6dg20dw07t1i6.gif);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Jenkins避坑配置</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h3 id="1、环境准备"><a href="#1、环境准备" class="headerlink" title="1、环境准备"></a>1、环境准备</h3><blockquote>
+<p><code>Linux</code>镜像，这里我选择的是<code>CentOS7官方精简版</code>，特点是占用空间小</p>
+<p>链接：<a href="https://mirrors.aliyun.com/centos/7.8.2003/isos/x86_64/CentOS-7-x86_64-Minimal-2003.iso" target="_blank" rel="noopener">https://mirrors.aliyun.com/centos/7.8.2003/isos/x86_64/CentOS-7-x86_64-Minimal-2003.iso</a></p>
+</blockquote>
+<blockquote>
+<p><code>虚拟机</code>软件，这里我选择的是<code>VMWare15绿色精简版</code></p>
+<p>链接：<a href="https://cloud.189.cn/t/ZRfiYv73Y3qu" target="_blank" rel="noopener">https://cloud.189.cn/t/ZRfiYv73Y3qu</a></p>
+<p>密码：<code>tnd5</code></p>
+</blockquote>
+<blockquote>
+<p><code>SSH</code>连接工具，这里我选择的是<code>XShell6绿色精简版</code></p>
+<p>链接：<a href="https://cloud.189.cn/t/7jQju2vUB3Yr" target="_blank" rel="noopener">https://cloud.189.cn/t/7jQju2vUB3Yr</a></p>
+<p>密码：<code>m7vd</code></p>
+</blockquote>
+<h3 id="2、环境配置"><a href="#2、环境配置" class="headerlink" title="2、环境配置"></a>2、环境配置</h3><p>此处省略<code>VMWare</code>与<code>CentOS</code>的安装步骤，直接从<code>Linux</code>中开始配置环境</p>
+<p>1、配置网卡信息为静态IP地址，且开机自启动</p>
+<pre class=" language-shell"><code class="language-shell"># 编辑ifcfg-ens33 按i进入编辑模式
+vi /etc/sysconfig/network-scripts/ifcfg-ens33
+# 将内容全部替换为如下信息 注意修改IP和网关为自己的
+TYPE=Ethernet
+BOOTPROTO=static
+DEVICE=ens33
+ONBOOT=yes
+IPADDR=IP地址
+NETMASK=255.255.255.0
+GATEWAY=网关地址
+DNS1=8.8.8.8
+# 按esc退出编辑模式 输入如下命令保存并退出
+:wq
+# 重启网卡
+service network restart
+# 因为是最小化安装 此时可用命令ip addr查看分配网卡情况
+ip addr
+
+# 关机 配置网络为桥接模式
+# 开机联网后安装ifconfig功能
+yum install net-tools</code></pre>
+<p>2、此时我们可以使用<code>XShell</code>连接到我们的虚拟机了，接下来准备需要的软件</p>
+<blockquote>
+<p><code>Maven3.6.3</code>：<a href="https://cloud.189.cn/t/YVr6vuBR7Fbq（访问码：`u62v`）" target="_blank" rel="noopener">https://cloud.189.cn/t/YVr6vuBR7Fbq（访问码：`u62v`）</a></p>
+<p><code>Jenkins</code>：<a href="https://cloud.189.cn/t/QnMjeqfmiAf2（访问码：`tc7l`）" target="_blank" rel="noopener">https://cloud.189.cn/t/QnMjeqfmiAf2（访问码：`tc7l`）</a></p>
+<p><code>JDK8</code>：<a href="https://cloud.189.cn/t/URzqMjZR3MVb（访问码：`8zp2`）" target="_blank" rel="noopener">https://cloud.189.cn/t/URzqMjZR3MVb（访问码：`8zp2`）</a></p>
+</blockquote>
+<p>3、将上述软件准备好后，我们使用<code>Xftp</code>将所有下载的文件上传到<code>CentOS</code>中任意目录下，这里我选择的是<code>/root</code>目录下，然后使用命令进行解压</p>
+<pre class=" language-shell"><code class="language-shell">tar -zxvf apache-maven-3.6.3-bin.tar.gz
+tar -zxvf jdk-8u251-linux-x64.tar.gz</code></pre>
+<p>4、将目录名修改为<code>JDK8</code>、<code>maven</code>，并新建文件夹<code>repo</code>用于存放<code>maven</code>下载的依赖<code>jar</code></p>
+<blockquote>
+<p>修改<code>maven/conf/settings.xml</code>配置文件，修改内容如下</p>
+</blockquote>
+<pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>settings</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://maven.apache.org/SETTINGS/1.0.0<span class="token punctuation">"</span></span>
+          <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
+          <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>localRepository</span><span class="token punctuation">></span></span>/root/repo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>localRepository</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrors</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirror</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>nexus-aliyun<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrorOf</span><span class="token punctuation">></span></span>*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrorOf</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>Nexus aliyun<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span>http://maven.aliyun.com/nexus/content/groups/public<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirror</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrors</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>profiles</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>profile</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>jdk-1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activation</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>activeByDefault</span><span class="token punctuation">></span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>activeByDefault</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jdk</span><span class="token punctuation">></span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>jdk</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>activation</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maven.compiler.source</span><span class="token punctuation">></span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maven.compiler.source</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maven.compiler.target</span><span class="token punctuation">></span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maven.compiler.target</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maven.compiler.compilerVersion</span><span class="token punctuation">></span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maven.compiler.compilerVersion</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>profile</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>profiles</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>settings</span><span class="token punctuation">></span></span></code></pre>
+<p>5、现在我们需要将<code>maven</code>和<code>JDK</code>加入到环境变量中</p>
+<pre class=" language-shell"><code class="language-shell"># 修改profile文件
+vi /etc/profile
+# 在文件最后加上如下内容
+export JAVA_HOME=/root/JDK8
+export MAVEN_HOME=/root/maven
+export PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
+# 保存退出后执行命令保存配置文件
+source /etc/profile</code></pre>
+<p>6、执行命令安装<code>git</code></p>
+<pre class=" language-shell"><code class="language-shell"># 联网安装git
+yum install git
+# 查看git安装位置
+whereis git
+# 结果如下
+git: /usr/bin/git /usr/share/man/man1/git.1.gz</code></pre>
+<p>7、因<code>jenkins</code>默认端口是<code>8080</code>，所以我们要放行<code>8080</code>端口，否则无法访问</p>
+<pre class=" language-shell"><code class="language-shell"># 编辑/etc/sysconfig目录下iptables文件 如没有该文件 使用如下命令安装
+yum install -y iptables 
+yum install iptables-services
+# iptables新增内容如下 端口为jenkins启动端口
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 8080 -j ACCEPT
+# 如果依旧不能访问 关闭防火墙
+systemctl stop firewalld</code></pre>
+<p>8、启动<code>jenkins</code>，默认端口是<code>8080</code>，即可看到解锁<code>jenkins</code>界面了</p>
+<pre class=" language-shell"><code class="language-shell"># 前台启动命令
+java -jar jenkins.war
+# 后台启动命令
+nohup java -jar jenkins.war &</code></pre>
+<p><img src="https://wx3.sinaimg.cn/large/cc586804ly1ggcyuywvxij20xu0nmmya.jpg" alt=""></p>
+<p>使用如下命令查看<code>管理员密码</code></p>
+<pre class=" language-shell"><code class="language-shell">cat /root/.jenkins/secrets/initialAdminPassword</code></pre>
+<p>然后安装插件、新建用户的名字跟密码，最后进入到<code>jenkins</code>的首页</p>
+<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyv323vxj21h10nkgn8.jpg" alt=""></p>
+<p>9、因为<code>jenkins</code>默认的插件下载速度极其缓慢，我们先将下载源修改为<code>国内源</code></p>
+<pre class=" language-shell"><code class="language-shell"># 进入jenkins工作目录中的updates目录下
+# jenkins工作目录可参考第一步管理员密码存放的路径
+cd /root/.jenkins/updates/
+# 编辑default.json
+vi default.json
+# 按i进入编辑模式 输入: 后面粘贴如下内容
+1,$s/http:\/\/updates.jenkins-ci.org\/download/https:\/\/mirrors.tuna.tsinghua.edu.cn\/jenkins/g
+# 继续输入: 粘贴如下内容
+1,$s/http:\/\/www.google.com/https:\/\/www.baidu.com/g
+# 输入:wq保存并退出
+:wq
+# 浏览器输入如下地址 重启jenkins
+ip:端口/restart</code></pre>
+<p>10、安装<code>maven插件</code>并将页面进行<code>完全汉化</code></p>
+<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyv5tea4j21gp0n7780.jpg" alt=""></p>
+<p>首先安装<code>maven插件</code></p>
+<p><img src="https://wx1.sinaimg.cn/large/cc586804ly1ggcyv8xfx5j21gu0p4dic.jpg" alt=""></p>
+<p>然后安装汉化插件</p>
+<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyvbglz6j215s0elmxq.jpg" alt=""></p>
+<p>安装完成后返回首页，进入到<code>配置系统</code>页面</p>
+<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyxugs5vj21h10lxadp.jpg" alt=""></p>
+<p>找到<code>Locale</code>选项，输入<code>zh_US</code>，这里并不是输入错误，一定要是<code>zh_US</code>才能完全汉化</p>
+<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyxxcgzvj216i0art90.jpg" alt=""></p>
+<p>应用保存后，地址栏输入<code>restart</code>重启<code>jenkins</code></p>
+<p>11、重启完成后，点击<code>系统管理-全局工具配置</code></p>
+<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyxzrnxsj21gt0h1acz.jpg" alt=""></p>
+<p>按如下图配置<code>maven</code>和<code>JDK</code>的路径</p>
+<p><img src="https://wx2.sinaimg.cn/large/cc586804ly1ggcyy2kx88j214t0i3gme.jpg" alt=""></p>
+<p>输入如下命令 查看<code>git</code>安装位置</p>
+<pre class=" language-shell"><code class="language-shell">whereis git</code></pre>
+<p>将前半部分路径配置到<code>git</code>中</p>
+<pre class=" language-shell"><code class="language-shell">git: /usr/bin/git /usr/share/man/man1/git.1.gz</code></pre>
+<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyy4vz5fj214e09k3yj.jpg" alt=""></p>
+<p>配置<code>maven</code>路径，之后点击<code>应用-保存</code></p>
+<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcz6eczttj214t0cl0sw.jpg" alt=""></p>
+<h3 id="3、新建任务"><a href="#3、新建任务" class="headerlink" title="3、新建任务"></a>3、新建任务</h3><p>1、点击首页的<code>新建任务</code></p>
+<p><img src="https://wx2.sinaimg.cn/large/cc586804ly1ggcz6h3titj20yy0es3zk.jpg" alt=""></p>
+<p>2、新建一个<code>maven</code>任务，名字随便起，点击<code>确定</code></p>
+<p><img src="https://wx1.sinaimg.cn/large/cc586804ly1ggcz6jya24j20zx0n1414.jpg" alt=""></p>
+<p>3、在<code>源码管理</code>中输入你的<code>项目地址</code>，以及添加该项目网站的账号密码，例如使用的如果是<code>码云</code>，就输入码云的账号密码，输入的是<code>github</code>那就输入github的账号密码，填写成功后记得在<code>Credentials</code>选一下</p>
+<p>刚刚录入的账号密码选项</p>
+<p><img src="https://wx3.sinaimg.cn/mw690/cc586804ly1ggcz6no3nvj20vg0dt0tj.jpg" alt=""></p>
+<p>4、设置<code>maven</code>的打包命令</p>
+<p><img src="https://wx2.sinaimg.cn/large/cc586804ly1ggcz6q767jj20vz06l749.jpg" alt=""></p>
+<p>5、<code>应用-保存</code>，回到首页后点击<code>立即构建</code>，我们可以看到控制台输出<code>BUILD SUCCESS</code></p>
+<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggczbcki0hj214t0ka75l.jpg" alt=""></p>
+<p>6、将控制台输出的jar包位置记录下来，即上方蓝色部分的路径</p>
+<blockquote>
+<pre><code>/root/repo/starFire/starFire-api/0.0.1-SNAPSHOT/starFire-api-0.0.1-SNAPSHOT.jar</code></pre></blockquote>
+<p>到这里我们就完成了将项目从<code>git</code>地址下载并打包放到指定位置的操作了</p>
+<h3 id="4、启动项目"><a href="#4、启动项目" class="headerlink" title="4、启动项目"></a>4、启动项目</h3><p>现在我们已经有<code>jar</code>包了，接下来只需要让<code>jenkins</code>帮助我们启动项目，就完成了自动部署的功能了</p>
+<p><img src="https://wx3.sinaimg.cn/large/cc586804ly1ggczbfdku4j20uv0fwq4f.jpg" alt=""></p>
+<p>选择使用<code>执行shell</code></p>
+<p><img src="https://wx3.sinaimg.cn/large/cc586804ly1ggczbicnd7j20y30h23z4.jpg" alt=""></p>
+<p>将如下的<code>shell脚本</code>修改后输入，<code>应用并保存</code>即可</p>
+<p>需要注意的修改的点：</p>
+<p>修改<code>JAR_NAME</code>、<code>JAR_PATH</code>、<code>JAR_WORK_PATH</code></p>
+<p>可参考我上面获取到的<code>jar</code>路径修改</p>
+<blockquote>
+<p>/root/repo/starFire/starFire-api/0.0.1-SNAPSHOT/starFire-api-0.0.1-SNAPSHOT.jar</p>
+</blockquote>
+<pre class=" language-shell"><code class="language-shell">#!/bin/bash
+#服务名称
+SERVER_NAME=xinghuo
+# 源jar路径,mvn打包完成之后，target目录下的jar包名称，也可选择成为war包，war包可移动到Tomcat的webapps目录下运行，这里使用jar包，用java -jar 命令执行  
+JAR_NAME=starFire-api-0.0.1-SNAPSHOT
+# 源jar路径  
+#/usr/local/jenkins_home/workspace--->jenkins 工作目录
+#demo 项目目录
+#target 打包生成jar包的目录
+JAR_PATH=/root/repo/starFire/starFire-api/0.0.1-SNAPSHOT/
+# 打包完成之后，把jar包移动到运行jar包的目录--->work_daemon，work_daemon这个目录需要自己提前创建
+JAR_WORK_PATH=/root/repo/starFire/starFire-api/0.0.1-SNAPSHOT/
+
+echo "查询进程id-->$SERVER_NAME"
+PID=`ps -ef | grep "$SERVER_NAME" |grep jar| awk '{print $1}'`
+echo "得到进程ID：$PID"
+echo "结束进程"
+for id in $PID
+do
+    kill -9 $id  
+    echo "killed $id"  
+done
+echo "结束进程完成"
+
+#复制jar包到执行目录
+echo "复制jar包到执行目录:cp $JAR_PATH/$JAR_NAME.jar $JAR_WORK_PATH"
+cp $JAR_PATH/$JAR_NAME.jar $JAR_WORK_PATH
+echo "复制jar包完成"
+cd $JAR_WORK_PATH
+#修改文件权限
+chmod 755 $JAR_NAME.jar
+
+BUILD_ID=dontKillMe nohup java -jar  $JAR_NAME.jar  &</code></pre>
+<p>项目已经启动成功了</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+<section id="comment">
+  <!-- <h1 class="title">comment</h1> -->
+
+  
+    <!-- Valine ���ۿ� start -->
+    <!-- LeanCloud ������ -->
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- Valine ���Ĵ���� -->
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <div class="valine_thread"></div>
+    <script>
+        new Valine({
+            el: '.valine_thread',
+            app_id: 'Sg8MsNIQ27RbVCoxqmXYrWTm-gzGzoHsz',
+            app_key: 'eq1nbxr8Ocduj4H6WpMglLwE',
+            placeholder: '┗|｀O′|┛ 嗷~~ 来了老弟',
+            pageSize: '10',
+	    avatar: 'retro'
+        });
+    </script>
+    <!-- Valine ���ۿ� end -->
+  
+</section>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " target="_blank" rel="noopener" style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
