@@ -262,11 +262,11 @@ systemctl stop firewalld</code></pre>
 java -jar jenkins.war
 # 后台启动命令
 nohup java -jar jenkins.war &</code></pre>
-<p><img src="https://wx3.sinaimg.cn/large/cc586804ly1ggcyuywvxij20xu0nmmya.jpg" alt=""></p>
+<p><img src="http://wx3.sinaimg.cn/large/cc586804ly1ggcyuywvxij20xu0nmmya.jpg" alt=""></p>
 <p>使用如下命令查看<code>管理员密码</code></p>
 <pre class=" language-shell"><code class="language-shell">cat /root/.jenkins/secrets/initialAdminPassword</code></pre>
 <p>然后安装插件、新建用户的名字跟密码，最后进入到<code>jenkins</code>的首页</p>
-<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyv323vxj21h10nkgn8.jpg" alt=""></p>
+<p><img src="http://wx4.sinaimg.cn/large/cc586804ly1ggcyv323vxj21h10nkgn8.jpg" alt=""></p>
 <p>9、因为<code>jenkins</code>默认的插件下载速度极其缓慢，我们先将下载源修改为<code>国内源</code></p>
 <pre class=" language-shell"><code class="language-shell"># 进入jenkins工作目录中的updates目录下
 # jenkins工作目录可参考第一步管理员密码存放的路径
@@ -282,46 +282,46 @@ vi default.json
 # 浏览器输入如下地址 重启jenkins
 ip:端口/restart</code></pre>
 <p>10、安装<code>maven插件</code>并将页面进行<code>完全汉化</code></p>
-<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyv5tea4j21gp0n7780.jpg" alt=""></p>
+<p><img src="http://wx4.sinaimg.cn/large/cc586804ly1ggcyv5tea4j21gp0n7780.jpg" alt=""></p>
 <p>首先安装<code>maven插件</code></p>
-<p><img src="https://wx1.sinaimg.cn/large/cc586804ly1ggcyv8xfx5j21gu0p4dic.jpg" alt=""></p>
+<p><img src="http://wx1.sinaimg.cn/large/cc586804ly1ggcyv8xfx5j21gu0p4dic.jpg" alt=""></p>
 <p>然后安装汉化插件</p>
-<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyvbglz6j215s0elmxq.jpg" alt=""></p>
+<p><img src="http://wx4.sinaimg.cn/large/cc586804ly1ggcyvbglz6j215s0elmxq.jpg" alt=""></p>
 <p>安装完成后返回首页，进入到<code>配置系统</code>页面</p>
-<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyxugs5vj21h10lxadp.jpg" alt=""></p>
+<p><img src="http://wx4.sinaimg.cn/large/cc586804ly1ggcyxugs5vj21h10lxadp.jpg" alt=""></p>
 <p>找到<code>Locale</code>选项，输入<code>zh_US</code>，这里并不是输入错误，一定要是<code>zh_US</code>才能完全汉化</p>
-<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyxxcgzvj216i0art90.jpg" alt=""></p>
+<p><img src="http://wx4.sinaimg.cn/large/cc586804ly1ggcyxxcgzvj216i0art90.jpg" alt=""></p>
 <p>应用保存后，地址栏输入<code>restart</code>重启<code>jenkins</code></p>
 <p>11、重启完成后，点击<code>系统管理-全局工具配置</code></p>
-<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyxzrnxsj21gt0h1acz.jpg" alt=""></p>
+<p><img src="http://wx4.sinaimg.cn/large/cc586804ly1ggcyxzrnxsj21gt0h1acz.jpg" alt=""></p>
 <p>按如下图配置<code>maven</code>和<code>JDK</code>的路径</p>
-<p><img src="https://wx2.sinaimg.cn/large/cc586804ly1ggcyy2kx88j214t0i3gme.jpg" alt=""></p>
+<p><img src="http://wx2.sinaimg.cn/large/cc586804ly1ggcyy2kx88j214t0i3gme.jpg" alt=""></p>
 <p>输入如下命令 查看<code>git</code>安装位置</p>
 <pre class=" language-shell"><code class="language-shell">whereis git</code></pre>
 <p>将前半部分路径配置到<code>git</code>中</p>
 <pre class=" language-shell"><code class="language-shell">git: /usr/bin/git /usr/share/man/man1/git.1.gz</code></pre>
-<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcyy4vz5fj214e09k3yj.jpg" alt=""></p>
+<p><img src="http://wx4.sinaimg.cn/large/cc586804ly1ggcyy4vz5fj214e09k3yj.jpg" alt=""></p>
 <p>配置<code>maven</code>路径，之后点击<code>应用-保存</code></p>
-<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggcz6eczttj214t0cl0sw.jpg" alt=""></p>
+<p><img src="http://wx4.sinaimg.cn/large/cc586804ly1ggcz6eczttj214t0cl0sw.jpg" alt=""></p>
 <h3 id="3、新建任务"><a href="#3、新建任务" class="headerlink" title="3、新建任务"></a>3、新建任务</h3><p>1、点击首页的<code>新建任务</code></p>
-<p><img src="https://wx2.sinaimg.cn/large/cc586804ly1ggcz6h3titj20yy0es3zk.jpg" alt=""></p>
+<p><img src="http://wx2.sinaimg.cn/large/cc586804ly1ggcz6h3titj20yy0es3zk.jpg" alt=""></p>
 <p>2、新建一个<code>maven</code>任务，名字随便起，点击<code>确定</code></p>
-<p><img src="https://wx1.sinaimg.cn/large/cc586804ly1ggcz6jya24j20zx0n1414.jpg" alt=""></p>
+<p><img src="http://wx1.sinaimg.cn/large/cc586804ly1ggcz6jya24j20zx0n1414.jpg" alt=""></p>
 <p>3、在<code>源码管理</code>中输入你的<code>项目地址</code>，以及添加该项目网站的账号密码，例如使用的如果是<code>码云</code>，就输入码云的账号密码，输入的是<code>github</code>那就输入github的账号密码，填写成功后记得在<code>Credentials</code>选一下</p>
 <p>刚刚录入的账号密码选项</p>
-<p><img src="https://wx3.sinaimg.cn/mw690/cc586804ly1ggcz6no3nvj20vg0dt0tj.jpg" alt=""></p>
+<p><img src="http://wx3.sinaimg.cn/mw690/cc586804ly1ggcz6no3nvj20vg0dt0tj.jpg" alt=""></p>
 <p>4、设置<code>maven</code>的打包命令</p>
-<p><img src="https://wx2.sinaimg.cn/large/cc586804ly1ggcz6q767jj20vz06l749.jpg" alt=""></p>
+<p><img src="http://wx2.sinaimg.cn/large/cc586804ly1ggcz6q767jj20vz06l749.jpg" alt=""></p>
 <p>5、<code>应用-保存</code>，回到首页后点击<code>立即构建</code>，我们可以看到控制台输出<code>BUILD SUCCESS</code></p>
-<p><img src="https://wx4.sinaimg.cn/large/cc586804ly1ggczbcki0hj214t0ka75l.jpg" alt=""></p>
+<p><img src="http://wx4.sinaimg.cn/large/cc586804ly1ggczbcki0hj214t0ka75l.jpg" alt=""></p>
 <p>6、将控制台输出的jar包位置记录下来，即上方蓝色部分的路径</p>
 <blockquote>
 <pre><code>/root/repo/starFire/starFire-api/0.0.1-SNAPSHOT/starFire-api-0.0.1-SNAPSHOT.jar</code></pre></blockquote>
 <p>到这里我们就完成了将项目从<code>git</code>地址下载并打包放到指定位置的操作了</p>
 <h3 id="4、启动项目"><a href="#4、启动项目" class="headerlink" title="4、启动项目"></a>4、启动项目</h3><p>现在我们已经有<code>jar</code>包了，接下来只需要让<code>jenkins</code>帮助我们启动项目，就完成了自动部署的功能了</p>
-<p><img src="https://wx3.sinaimg.cn/large/cc586804ly1ggczbfdku4j20uv0fwq4f.jpg" alt=""></p>
+<p><img src="http://wx3.sinaimg.cn/large/cc586804ly1ggczbfdku4j20uv0fwq4f.jpg" alt=""></p>
 <p>选择使用<code>执行shell</code></p>
-<p><img src="https://wx3.sinaimg.cn/large/cc586804ly1ggczbicnd7j20y30h23z4.jpg" alt=""></p>
+<p><img src="http://wx3.sinaimg.cn/large/cc586804ly1ggczbicnd7j20y30h23z4.jpg" alt=""></p>
 <p>将如下的<code>shell脚本</code>修改后输入，<code>应用并保存</code>即可</p>
 <p>需要注意的修改的点：</p>
 <p>修改<code>JAR_NAME</code>、<code>JAR_PATH</code>、<code>JAR_WORK_PATH</code></p>
