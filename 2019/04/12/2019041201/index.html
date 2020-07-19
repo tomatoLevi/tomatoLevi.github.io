@@ -155,327 +155,57 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h4 id="1、注册Github账号"><a href="#1、注册Github账号" class="headerlink" title="1、注册Github账号"></a>1、注册Github账号</h4><font face="微软雅黑" size=4>
-打开github的官网:https://github.com
-点击右上角【SignUp】按钮开始注册
-已有github账号可以直接跳过这一步
-英语不好的朋友，可以在浏览器右键，选择【翻译成简体中文】</font>
-
+                <h4 id="1、注册Github账号"><a href="#1、注册Github账号" class="headerlink" title="1、注册Github账号"></a>1、注册Github账号</h4><p>打开github的官网:<a href="https://github.com" target="_blank" rel="noopener">https://github.com</a><br>点击右上角【SignUp】按钮开始注册<br>已有github账号可以直接跳过这一步<br>英语不好的朋友，可以在浏览器右键，选择【翻译成简体中文】</p>
 <p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn769yxbj21110iawg3.jpg" alt="01"></p>
-<h3 id="2、创建仓库"><a href="#2、创建仓库" class="headerlink" title="2、创建仓库"></a>2、创建仓库</h3><font face="微软雅黑" size=4>
-点击github右上角的加号，选择New repository,或者点击左侧Create a repository进行创建
-Repository name需要与你的用户名相同
-例如我的用户名:homraL 
-那么这里我要写:homraL.github.io
-</font>
-
+<h3 id="2、创建仓库"><a href="#2、创建仓库" class="headerlink" title="2、创建仓库"></a>2、创建仓库</h3><p>点击github右上角的加号，选择New repository,或者点击左侧Create a repository进行创建<br>Repository name需要与你的用户名相同<br>例如我的用户名:homraL<br>那么这里我要写:homraL.github.io</p>
 <p><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn76v3fhj217v0eamzx.jpg" alt="02"></p>
 <p><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn77d4glj20s60hqt9m.jpg" alt="03"></p>
-<h4 id="3、开启GitHub-Pages"><a href="#3、开启GitHub-Pages" class="headerlink" title="3、开启GitHub Pages"></a>3、开启GitHub Pages</h4><font face="微软雅黑" size=4>
-在打开的仓库页面，点击右上方的Settings按钮，在新打开的页面，向下找到GitHub Pages的部分
-可以通过Choose a theme更改主题
-可以通过上方绿色框内的地址进行访问
-例如我的地址就是: https://homral.github.io
-如果有域名可以填入Custom domain
-后面会单独讲如何与域名进行绑定，此处不做过多讨论
-</font>
-
-<p><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn781cujj217m0h80tt.jpg" alt="04"></p>
-<p><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn78hv2dj20ng0ibaaw.jpg" alt="05"></p>
-<font face="微软雅黑" size=4>
-下图为选择主题页面
-</font>
-
-<p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn79dogfj217l0g90zf.jpg" alt="06"></p>
-<font face="微软雅黑" size=4>
-下图为访问我的博客页面: https://homral.github.io
-</font>
-
-<p><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7a7o8fj212h0cs78i.jpg" alt="07"></p>
-<h4 id="4、搭建Hexo准备工作"><a href="#4、搭建Hexo准备工作" class="headerlink" title="4、搭建Hexo准备工作"></a>4、搭建Hexo准备工作</h4><font face="微软雅黑" size=4>
-搭建Hexo需要我们准备如下软件
-Node.js: https://nodejs.org/en/download
-Git: https://git-scm.com/download
-GitHub: https://desktop.github.com
-</font>
-
-<p><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7ap6nqj20wo0kfwft.jpg" alt="08"></p>
-<p><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn7bfkj5j20ul0fiq79.jpg" alt="09"></p>
-<p><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn75kj7bj20x10f2t9u.jpg" alt="00"></p>
-<font face="微软雅黑" size=4>
-现在我们从官网下载到上述三款软件
-首先配置node.js
-</font>
-
-<p><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn7bwlpfj20mv01p0so.jpg" alt="10"></p>
-<font face="微软雅黑" size=4>
-将node-v10.15.3-win-x64.zip解压到要安装的位置 并新建两个目录
-node-global:npm  全局安装位置
-node-cache:npm   缓存路径
-</font>
-
-<p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7cfwhnj20jh08b0t4.jpg" alt="11"></p>
-<font face="微软雅黑" size=4>
-接下来配置node相关的环境变量
-在Path中添加如下两条
-E:\Learn\Java\Software\Node
-E:\Learn\Java\Software\Node\node-global
-第一条是你的Node解压后的根路径 方便我们在任意目录下使用node命令
-第二条是我们刚新建的全局安装位置
-</font>
-
-<p><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7drh0nj218g0nyds0.jpg" alt="12"></p>
-<font face="微软雅黑" size=4>
-接下来可以通过命令行 输入下方两条命令进行检验是否配置成功
-node -v
-npm -v
-如下显示即代表成功了
-</font>
-
-<p><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7e8vtuj20dl05fwec.jpg" alt="13"></p>
-<font face="微软雅黑" size=4>
-接下来将node-global和node-cache与npm配置到一起
-分别运行如下两条命令 路径需要替换为你自己的路径
-npm config set prefix "E:\Learn\Java\Software\Node\node-global"
-npm config set cache "E:\Learn\Java\Software\Node\node-cache"
-执行成功后 在运行如下两条命令
-npm install webpack -g
-npm install -g npm
-见到如下说明成功了
-需要注意的是 这里的WARN不需要在意 因为部分功能是给MAC系统使用的
-忽略即可 只要不是ERROR就可以啦
-到这里Node.js的准备告一段落
-</font>
-
-<p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7ertlwj20ld0aojrm.jpg" alt="14"></p>
-<font face="微软雅黑" size=4>
-接下来安装一下Git
-这里我们也是根据系统的位数与需要的版本进行安装
-同时也会提供ZIP免安装版与EXE安装版
-与Node不同 Git我选择了安装版
-较免安装版配置上个人觉得更方便一点
-安装过程全程一直保持默认下一步即可
-安装成功后 我们在任意文件夹内空白处点击鼠标右键
-如出现下面菜单 就说明安装成功了
-</font>
-
-<p><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7f75fsj20ox0bo0t7.jpg" alt="15"></p>
-<font face="微软雅黑" size=4>
-接下来双击GitHubDesktopSetup.exe
-不需要你选择任何东西 甚至你都不知道安装到哪里去了
-然后它就安装完毕并自动打开了
-登录你的github账号
-将对应你用户名的仓库克隆到本地的一个目录
-</font>
-
-<p><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7fokz7j20ox0damxm.jpg" alt="16"></p>
-<font face="微软雅黑" size=4>
-等待一下 在对应的目录下我们就能看到啦
-到这里Hexo的准备工作已经完成
-下次我们可以点击桌面上紫色的图标GitHub Desktop来启动它
-</font>
-
-<p><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7g81x4j20hh06774b.jpg" alt="17"></p>
-<h4 id="5、搭建Hexo开始"><a href="#5、搭建Hexo开始" class="headerlink" title="5、搭建Hexo开始"></a>5、搭建Hexo开始</h4><font face="微软雅黑" size=4>
-我们可以先创建一个Hexo文件夹(名字随意 下文中myblog同样）
-进入到文件夹后 右键选择Git Bash Here
-依次输入下方四条命令
-npm install -g hexo-cli
-hexo init myblog
-cd myblog
-npm install
-</font>
-
-<p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7h3th1j20v708waau.jpg" alt="19"></p>
-<font face="微软雅黑" size=4>
-生成静态文件：hexo g
-启动服务器：hexo s
-注意：这里会有一个弹框 记得允许访问
-上述两条命令后 我们就可以访问啦
-</font>
-
-<p><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7hh0h0j20gq04fwej.jpg" alt="20"></p>
-<font face="微软雅黑" size=4>
-默认情况下 访问网址为：http://localhost:4000
-</font>
-
-<p><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7it0chj210j0e6k19.jpg" alt="21"></p>
-<h4 id="6、如何创建一篇新文章"><a href="#6、如何创建一篇新文章" class="headerlink" title="6、如何创建一篇新文章"></a>6、如何创建一篇新文章</h4><font face="微软雅黑" size=4>
-首先我们使用CTRL + C可以关掉服务
-新建文章：hexo new "文章名"
-之后会在Hexo\myblog\source\_posts下创建一个md文件
-我们可以复制该文件 修改标题或者文件名
-然后重新使用
-hexo g
-hexo s
-刷新http://localhost:4000就能看到了
-</font>
-
-<h4 id="7、更换Hexo的主题"><a href="#7、更换Hexo的主题" class="headerlink" title="7、更换Hexo的主题"></a>7、更换Hexo的主题</h4><font face="微软雅黑" size=4>
-打开Hexo官方主题页：https://hexo.io/themes
-挑选自己喜欢的主题
-这里楼主选择的是MiccallTheme
-</font>
-
-<p><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7k4c1ij20n50b7140.jpg" alt="22"></p>
-<font face="微软雅黑" size=4>
-首先进入theme文件夹下 右键选择Git Bash Here
-或者通过cd命令进入该文件夹
-然后将打开的主题github路径复制下来 请自行替换下方路径
-git clone https://github.com/miccall/hexo-theme-Mic_Theme
-之后我们就可以在themes下看到下载好的主题文件
-可以将名字改的短一点 方便使用
-</font>
-
-<p><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn7kh4jdj20f701wdfn.jpg" alt="23"></p>
-<font face="微软雅黑" size=4>
-然后打开Hexo的配置文件
-翻到最后找到theme属性
-将默认主题修改为你刚刚下载的文件夹名称
-这里我改成了Miccall
-</font>
-
-<p><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7kxp97j20p20avmxt.jpg" alt="24"></p>
-<p><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7lb7t5j20if06kdfu.jpg" alt="25"></p>
-<font face="微软雅黑" size=4>
-之后保存再次执行
-hexo g
-hexo s
-就可以看到新的主题了
-没有效果的可以先清理下在启动
-hexo clean
-</font>
-
-<p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7nz906j20w00fru0f.jpg" alt="26"></p>
-<h4 id="8、生成SSH密钥添加到GitHub"><a href="#8、生成SSH密钥添加到GitHub" class="headerlink" title="8、生成SSH密钥添加到GitHub"></a>8、生成SSH密钥添加到GitHub</h4><font face="微软雅黑" size=4>
-只有配置好SSH密钥后 我们才可以通过git操作实现本地代码库与Github代码库同步
-在myblog文件夹下输入命令<br/>yourname输入你的GitHub用户名
-youremail输入你GitHub的邮箱
-之后一直回车即可
-可在用户名文件夹下生成key
-C:\Users\用户名\.ssh
-</font>
-
+<h4 id="3、开启GitHub-Pages"><a href="#3、开启GitHub-Pages" class="headerlink" title="3、开启GitHub Pages"></a>3、开启GitHub Pages</h4><p>在打开的仓库页面，点击右上方的Settings按钮，在新打开的页面，向下找到GitHub Pages的部分<br>可以通过Choose a theme更改主题<br>可以通过上方绿色框内的地址进行访问<br>例如我的地址就是: <a href="https://homral.github.io" target="_blank" rel="noopener">https://homral.github.io</a><br>如果有域名可以填入Custom domain<br>后面会单独讲如何与域名进行绑定，此处不做过多讨论<br><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn781cujj217m0h80tt.jpg" alt="04"><br><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn78hv2dj20ng0ibaaw.jpg" alt="05"></p>
+<p>下图为选择主题页面<br><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn79dogfj217l0g90zf.jpg" alt="06"></p>
+<p>下图为访问我的博客页面: <a href="https://homral.github.io" target="_blank" rel="noopener">https://homral.github.io</a><br><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7a7o8fj212h0cs78i.jpg" alt="07"></p>
+<h4 id="4、搭建Hexo准备工作"><a href="#4、搭建Hexo准备工作" class="headerlink" title="4、搭建Hexo准备工作"></a>4、搭建Hexo准备工作</h4><p>搭建Hexo需要我们准备如下软件<br>Node.js: <a href="https://nodejs.org/en/download" target="_blank" rel="noopener">https://nodejs.org/en/download</a><br>Git: <a href="https://git-scm.com/download" target="_blank" rel="noopener">https://git-scm.com/download</a><br>GitHub: <a href="https://desktop.github.com" target="_blank" rel="noopener">https://desktop.github.com</a><br><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7ap6nqj20wo0kfwft.jpg" alt="08"><br><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn7bfkj5j20ul0fiq79.jpg" alt="09"><br><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn75kj7bj20x10f2t9u.jpg" alt="00"></p>
+<p>现在我们从官网下载到上述三款软件<br>首先配置node.js<br><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn7bwlpfj20mv01p0so.jpg" alt="10"></p>
+<p>将node-v10.15.3-win-x64.zip解压到要安装的位置 并新建两个目录<br>node-global:npm  全局安装位置<br>node-cache:npm   缓存路径<br><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7cfwhnj20jh08b0t4.jpg" alt="11"></p>
+<p>接下来配置node相关的环境变量<br>在Path中添加如下两条<br>E:\Learn\Java\Software\Node<br>E:\Learn\Java\Software\Node\node-global<br>第一条是你的Node解压后的根路径 方便我们在任意目录下使用node命令<br>第二条是我们刚新建的全局安装位置<br><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7drh0nj218g0nyds0.jpg" alt="12"></p>
+<p>接下来可以通过命令行<br>输入下方两条命令进行检验是否配置成功<br>node -v<br>npm -v<br>如下显示即代表成功了<br><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7e8vtuj20dl05fwec.jpg" alt="13"></p>
+<p>接下来将node-global和node-cache与npm配置到一起<br>分别运行如下两条命令 路径需要替换为你自己的路径<br>npm config set prefix “E:\Learn\Java\Software\Node\node-global”<br>npm config set cache “E:\Learn\Java\Software\Node\node-cache”<br>执行成功后 在运行如下两条命令<br>npm install webpack -g<br>npm install -g npm<br>见到如下说明成功了<br>需要注意的是 这里的WARN不需要在意 因为部分功能是给MAC系统使用的<br>忽略即可 只要不是ERROR就可以啦<br>到这里Node.js的准备告一段落<br><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7ertlwj20ld0aojrm.jpg" alt="14"></p>
+<p>接下来安装一下Git<br>这里我们也是根据系统的位数与需要的版本进行安装<br>同时也会提供ZIP免安装版与EXE安装版<br>与Node不同 Git我选择了安装版<br>较免安装版配置上个人觉得更方便一点<br>安装过程全程一直保持默认下一步即可<br>安装成功后 我们在任意文件夹内空白处点击鼠标右键<br>如出现下面菜单 就说明安装成功了<br><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7f75fsj20ox0bo0t7.jpg" alt="15"></p>
+<p>接下来双击GitHubDesktopSetup.exe<br>不需要你选择任何东西 甚至你都不知道安装到哪里去了<br>然后它就安装完毕并自动打开了<br>登录你的github账号<br>将对应你用户名的仓库克隆到本地的一个目录<br><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7fokz7j20ox0damxm.jpg" alt="16"></p>
+<p>等待一下 在对应的目录下我们就能看到啦<br>到这里Hexo的准备工作已经完成<br>下次我们可以点击桌面上紫色的图标GitHub Desktop来启动它<br><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7g81x4j20hh06774b.jpg" alt="17"></p>
+<h4 id="5、搭建Hexo开始"><a href="#5、搭建Hexo开始" class="headerlink" title="5、搭建Hexo开始"></a>5、搭建Hexo开始</h4><p>我们可以先创建一个Hexo文件夹(名字随意 下文中myblog同样）<br>进入到文件夹后 右键选择Git Bash Here<br>依次输入下方四条命令<br>npm install -g hexo-cli<br>hexo init myblog<br>cd myblog<br>npm install<br><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7h3th1j20v708waau.jpg" alt="19"></p>
+<p>生成静态文件：hexo g<br>启动服务器：hexo s<br>注意：这里会有一个弹框 记得允许访问<br>上述两条命令后 我们就可以访问啦<br><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7hh0h0j20gq04fwej.jpg" alt="20"></p>
+<p>默认情况下 访问网址为：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a><br><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7it0chj210j0e6k19.jpg" alt="21"></p>
+<h4 id="6、如何创建一篇新文章"><a href="#6、如何创建一篇新文章" class="headerlink" title="6、如何创建一篇新文章"></a>6、如何创建一篇新文章</h4><p>首先我们使用CTRL + C可以关掉服务<br>新建文章：hexo new “文章名”<br>之后会在Hexo\myblog\source_posts下创建一个md文件<br>我们可以复制该文件 修改标题或者文件名<br>然后重新使用<br>hexo g<br>hexo s<br>刷新<a href="http://localhost:4000就能看到了">http://localhost:4000就能看到了</a></p>
+<h4 id="7、更换Hexo的主题"><a href="#7、更换Hexo的主题" class="headerlink" title="7、更换Hexo的主题"></a>7、更换Hexo的主题</h4><p>打开Hexo官方主题页：<a href="https://hexo.io/themes" target="_blank" rel="noopener">https://hexo.io/themes</a><br>挑选自己喜欢的主题<br>这里楼主选择的是MiccallTheme<br><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7k4c1ij20n50b7140.jpg" alt="22"></p>
+<p>首先进入theme文件夹下 右键选择Git Bash Here<br>或者通过cd命令进入该文件夹<br>然后将打开的主题github路径复制下来 请自行替换下方路径<br>git clone <a href="https://github.com/miccall/hexo-theme-Mic_Theme" target="_blank" rel="noopener">https://github.com/miccall/hexo-theme-Mic_Theme</a><br>之后我们就可以在themes下看到下载好的主题文件<br>可以将名字改的短一点 方便使用<br><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn7kh4jdj20f701wdfn.jpg" alt="23"></p>
+<p>然后打开Hexo的配置文件<br>翻到最后找到theme属性<br>将默认主题修改为你刚刚下载的文件夹名称<br>这里我改成了Miccall<br><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7kxp97j20p20avmxt.jpg" alt="24"><br><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7lb7t5j20if06kdfu.jpg" alt="25"></p>
+<p>之后保存再次执行<br>hexo g<br>hexo s<br>就可以看到新的主题了<br>没有效果的可以先清理下在启动<br>hexo clean<br><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7nz906j20w00fru0f.jpg" alt="26"></p>
+<h4 id="8、生成SSH密钥添加到GitHub"><a href="#8、生成SSH密钥添加到GitHub" class="headerlink" title="8、生成SSH密钥添加到GitHub"></a>8、生成SSH密钥添加到GitHub</h4><p>只有配置好SSH密钥后 我们才可以通过git操作实现本地代码库与Github代码库同步<br>在myblog文件夹下输入命令<br>yourname输入你的GitHub用户名<br>youremail输入你GitHub的邮箱<br>之后一直回车即可<br>可在用户名文件夹下生成key<br>C:\Users\用户名.ssh</p>
 <pre class=" language-properties"><code class="language-properties"><span class="token attr-name">git</span> <span class="token attr-value">config --global user.name "yourname"</span>
 <span class="token attr-name">git</span> <span class="token attr-value">config --global user.email "youremail"</span>
 <span class="token attr-name">ssh-keygen</span> <span class="token attr-value">-t rsa -C "youremail"</span></code></pre>
 <p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7oi8jgj20lo07zmxa.jpg" alt="27"></p>
-<font face="微软雅黑" size=4>
-id_rsa是你这台电脑的私人秘钥 不能给别人看的
-id_rsa.pub是公共秘钥 可以随便给别人看
-我们要把公钥放在GitHub上 这样当你链接GitHub自己的账户时
-它就会根据公钥匹配你的私钥 当能够相互匹配时
-才能够顺利的通过git上传你的文件到GitHub上
-我们打开github官网
-找到右上角头像下的settings
-选择SSH and GPG keys
-点击New SSH key创建新的SSHkey
-</font>
-
-<p><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn7oxmtdj211g0cugmm.jpg" alt="28"></p>
-<font face="微软雅黑" size=4>
-在新弹出的页面中
-随便输如一个title名字
-将id_rsa.pub文件中的内容全选复制到下方框内
-点击add ssh key
-之后会让你输入一次github的密码进行确认
-</font>
-
-<p><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7q7bu1j20qu0bzt8v.jpg" alt="29"></p>
-<font face="微软雅黑" size=4>
-之后打开Hexo的配置文件
-拉到最下面 将内容修改为如下
-homraL替换成你自己的github名字
-</font>
-
+<p>id_rsa是你这台电脑的私人秘钥 不能给别人看的<br>id_rsa.pub是公共秘钥 可以随便给别人看<br>我们要把公钥放在GitHub上 这样当你链接GitHub自己的账户时<br>它就会根据公钥匹配你的私钥 当能够相互匹配时<br>才能够顺利的通过git上传你的文件到GitHub上<br>我们打开github官网<br>找到右上角头像下的settings<br>选择SSH and GPG keys<br>点击New SSH key创建新的SSHkey<br><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn7oxmtdj211g0cugmm.jpg" alt="28"></p>
+<p>在新弹出的页面中<br>随便输如一个title名字<br>将id_rsa.pub文件中的内容全选复制到下方框内<br>点击add ssh key<br>之后会让你输入一次github的密码进行确认<br><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7q7bu1j20qu0bzt8v.jpg" alt="29"></p>
+<p>之后打开Hexo的配置文件<br>拉到最下面 将内容修改为如下<br>homraL替换成你自己的github名字</p>
 <pre class=" language-properties"><code class="language-properties"><span class="token attr-name">deploy</span><span class="token punctuation">:</span>
 <span class="token attr-name">  type</span><span class="token punctuation">:</span> <span class="token attr-value">git</span>
 <span class="token attr-name">  repository</span><span class="token punctuation">:</span> <span class="token attr-value">git@github.com:homraL/homraL.github.io.git</span>
 <span class="token attr-name">  branch</span><span class="token punctuation">:</span> <span class="token attr-value">master</span></code></pre>
 <p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7qlzbaj20lj04tweg.jpg" alt="30"></p>
-<font face="微软雅黑" size=4>
-仓库地址可以在你的github仓库主页找到
-点击Clone or download
-因为我们选用的是SSH方式 所以选择use SSH
-然后复制下方地址到repository后面即可
-注意：每一个属性后面的空格不可删掉
-</font>
+<p>仓库地址可以在你的github仓库主页找到<br>点击Clone or download<br>因为我们选用的是SSH方式 所以选择use SSH<br>然后复制下方地址到repository后面即可<br>注意：每一个属性后面的空格不可删掉<br><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7qzi3ij20sz0a83z8.jpg" alt="31"></p>
+<p>在git中输入命令安装deploy-git<br>这样我们才能用命令部署到GitHub<br>npm install hexo-deployer-git –save<br>接下来我们重新部署一下即可<br>hexo clean 清除了你之前生成的东西 也可以不加<br>hexo generate 生成静态文章 可以用hexo g缩写<br>hexo deploy 部署文章 可以用hexo d缩写</p>
+<p>注意：deploy时可能要你输入username和password<br>这个时候 我们再次访问<a href="https://homral.github.io" target="_blank" rel="noopener">https://homral.github.io</a><br>就可以看到更换成hexo了<br><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7rgu84j20g302gq2t.jpg" alt="32"></p>
+<h4 id="9、绑定个人域名-非必须内容"><a href="#9、绑定个人域名-非必须内容" class="headerlink" title="9、绑定个人域名(非必须内容)"></a>9、绑定个人域名(非必须内容)</h4><p>现在我们已经可以通过homral.github.io访问了<br>但是看起来不够”厉害”<br>所以我们可以买一个自己的域名绑定到上面<br>楼主是在阿里云买的域名 <a href="https://wanwang.aliyun.com" target="_blank" rel="noopener">https://wanwang.aliyun.com</a><br><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7teqcoj21340i2qmn.jpg" alt="33"></p>
+<p>好了 到这一步假装我们有了一个域名<br>就假装是楼主的那个吧<br>homra.cn<br>然后我们打开 <a href="https://dc.console.aliyun.com/next/#/domain/list/all-domain" target="_blank" rel="noopener">https://dc.console.aliyun.com/next/#/domain/list/all-domain</a><br>找到域名右侧的解析按钮<br><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7tzl8yj210b02ymx3.jpg" alt="34"></p>
+<p>点击添加纪录 按照楼主的记录创建两条记录<br><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7voqgyj211907iglw.jpg" alt="35"></p>
+<p>然后我们打开github 找到最开始说的Custom domain<br>将申请好的域名填写到这里<br><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7w6vbxj20k407h0sv.jpg" alt="36"></p>
+<p>然后打开博客的source目录<br>创建一个无后缀名的CNAME文件<br>里面输入你的域名<br><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn7wvm70j20qz0bb75d.jpg" alt="37"></p>
+<p>最后在你懂得<br>hexo clean<br>hexo g<br>hexo d</p>
+<p>很久很久之后<br>如果不能访问不要着急<br>因为需要解析的<br>几分钟到几小时不等<br>最终你发现你的域名终于可以访问了<br>如果更换了新电脑 该怎么继续写博客呢？<br>只需要备份Hexo下的这些文件即可<br>_config.yml<br>package.json<br>scaffolds目录<br>source目录<br>themes目录<br>之后覆盖到新电脑中的相同位置<br>最后执行上方三条命令重新生成发布即可</p>
+<p>本文写于2019年4月11日 上海<br>转载请注明出处</p>
+<p>参考链接 感谢<br><a href="https://www.cnblogs.com/jackyroc/p/7681938.html" target="_blank" rel="noopener">https://www.cnblogs.com/jackyroc/p/7681938.html</a><br><a href="https://www.cnblogs.com/lxg0/p/9472851.html" target="_blank" rel="noopener">https://www.cnblogs.com/lxg0/p/9472851.html</a><br><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029" target="_blank" rel="noopener">https://blog.csdn.net/sinat_37781304/article/details/82729029</a></p>
 
-<p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7qzi3ij20sz0a83z8.jpg" alt="31"></p>
-<font face="微软雅黑" size=4>
-在git中输入命令安装deploy-git
-这样我们才能用命令部署到GitHub
-npm install hexo-deployer-git --save
-接下来我们重新部署一下即可
-hexo clean 清除了你之前生成的东西 也可以不加
-hexo generate 生成静态文章 可以用hexo g缩写
-hexo deploy 部署文章 可以用hexo d缩写
-
-<p>注意：deploy时可能要你输入username和password<br>这个时候 我们再次访问<a href="https://homral.github.io" target="_blank" rel="noopener">https://homral.github.io</a><br>就可以看到更换成hexo了<br></font></p>
-<p><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7rgu84j20g302gq2t.jpg" alt="32"></p>
-<h4 id="9、绑定个人域名-非必须内容"><a href="#9、绑定个人域名-非必须内容" class="headerlink" title="9、绑定个人域名(非必须内容)"></a>9、绑定个人域名(非必须内容)</h4><font face="微软雅黑" size=4>
-现在我们已经可以通过homral.github.io访问了
-但是看起来不够"厉害"
-所以我们可以买一个自己的域名绑定到上面
-楼主是在阿里云买的域名 https://wanwang.aliyun.com
-</font>
-
-<p><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7teqcoj21340i2qmn.jpg" alt="33"></p>
-<font face="微软雅黑" size=4>
-好了 到这一步假装我们有了一个域名
-就假装是楼主的那个吧
-homra.cn
-然后我们打开 https://dc.console.aliyun.com/next/#/domain/list/all-domain
-找到域名右侧的解析按钮
-</font>
-
-<p><img src="http://wx4.sinaimg.cn/large/cc586804gy1g1zn7tzl8yj210b02ymx3.jpg" alt="34"></p>
-<font face="微软雅黑" size=4>
-点击添加纪录 按照楼主的记录创建两条记录
-</font>
-
-<p><img src="http://wx2.sinaimg.cn/large/cc586804gy1g1zn7voqgyj211907iglw.jpg" alt="35"></p>
-<font face="微软雅黑" size=4>
-然后我们打开github 找到最开始说的Custom domain
-将申请好的域名填写到这里
-</font>
-
-<p><img src="http://wx1.sinaimg.cn/large/cc586804gy1g1zn7w6vbxj20k407h0sv.jpg" alt="36"></p>
-<font face="微软雅黑" size=4>
-然后打开博客的source目录
-创建一个无后缀名的CNAME文件
-里面输入你的域名
-</font>
-
-<p><img src="http://wx3.sinaimg.cn/large/cc586804gy1g1zn7wvm70j20qz0bb75d.jpg" alt="37"></p>
-<font face="微软雅黑" size=4>
-最后在你懂得
-hexo clean
-hexo g
-hexo d
-------------------------------
-很久很久之后
-如果不能访问不要着急
-因为需要解析的
-几分钟到几小时不等
-最终你发现你的域名终于可以访问了
-如果更换了新电脑 该怎么继续写博客呢？
-只需要备份Hexo下的这些文件即可
-_config.yml
-package.json
-scaffolds目录
-source目录
-themes目录
-之后覆盖到新电脑中的相同位置
-最后执行上方三条命令重新生成发布即可
-
-<p>本文写于2019年4月11日 上海<br>转载请注明出处<br></font></p>
-<font face="微软雅黑" size=4>
-参考链接 感谢
-https://www.cnblogs.com/jackyroc/p/7681938.html
-https://www.cnblogs.com/lxg0/p/9472851.html
-https://blog.csdn.net/sinat_37781304/article/details/82729029
-</font>
             </div>
 
             <!-- Post Comments -->
