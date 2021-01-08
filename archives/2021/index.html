@@ -70,26 +70,25 @@
 	
 <meta name="generator" content="Hexo 4.2.1"></head>
     
-		
-<!-- Layouts -->
-
-
-
-<!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_tomorrow.css" />
-<link rel="stylesheet" href="/css/typo.css" />
-<link rel="stylesheet" href="/css/APlayer.min.css" />
-<link rel="stylesheet" href="/css/DPlayer.min.css" />
-<!-- 文章页 -->
-<body class="is-loading">
+		<body class="is-loading">
     <!-- Wrapper 外包 s-->
-    <div id="wrapper" class="fade-in">
+    <div id="wrapper" class="fade-in overlay">
         <!-- Intro 头部显示 s -->
+                <div id="intro">
+            <h1>This is<br />
+                        Levi.u </h1>
+            <p> 凶手和恋人 <br/> 都喜欢事后重返现场
+            </p>
+            <ul class="actions">
+                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+            </ul>
+        </div>
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
     <a href="/" class="logo">吠舞罗</a>
 </header>
+        <!-- Header 头部logo end -->
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special" >
             <ul class="menu links" >
@@ -148,49 +147,55 @@
                     
 			</ul>
 </nav>
+        <!-- Nav 导航条 end -->
+        <!-- Main 主要部分 start -->
+        
+        <!-- 文章列表   s -->
+        <div id="main" style="background-color: transparent; padding:0;">
+        <section class="link_container" style="margin-top: 0; background-color: transparent; ">
+            <div class="link_row">
+                <!-- 文章sample  s-->
 
-        <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://wx1.sinaimg.cn/large/cc586804gy1g1zyebf78fj20vl0hsmyp.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Hello World</h2></a>
-            </div>
-            <!-- Post -->
-            <div class="typo" style="padding: 3rem;">
-                <h4 id="测试代码高亮显示"><a href="#测试代码高亮显示" class="headerlink" title="测试代码高亮显示"></a>测试代码高亮显示</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Demo</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-
-            </div>
-
-            <!-- Post Comments -->
+                
+                <div class="6u 12u(narrower)">
+                    <section class="link_box special">
+                       <a href="/2021/01/08/2021010801/">
+                        <div class="page_title" style="background-image: url(http://ww1.sinaimg.cn/large/cc586804ly1gmg3drlm8qg20dw064e81.gif);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
+                            <!--标题-->
+                            <h2 class="page_title_text"> Java NIO学习笔记 </h2>
+                            <!--段落-->
+                        </div>
+                        </a>
+                        <div class="home-post-info">
+                            <!-- Author Avatar -->
+                            <div class="home-post-info-author-avatar">
+                                <h6><span class="home-post-info-data">2021-01-08</span></h6>
+                                <div class="home-post-info-Category">
+                                    <!-- Category -->
+                                    <span>
+                            <h6>
+                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/" target="_blank" rel="noopener">
+                                </a>
+                            </h6>
+                        </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- 文章sample  e-->
             
-<section id="comment">
-  <!-- <h1 class="title">comment</h1> -->
-
-  
-    <!-- Valine ���ۿ� start -->
-    <!-- LeanCloud ������ -->
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-    <!-- Valine ���Ĵ���� -->
-    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
-    <div class="valine_thread"></div>
-    <script>
-        new Valine({
-            el: '.valine_thread',
-            app_id: 'Sg8MsNIQ27RbVCoxqmXYrWTm-gzGzoHsz',
-            app_key: 'eq1nbxr8Ocduj4H6WpMglLwE',
-            placeholder: '┗|｀O′|┛ 嗷~~ 来了老弟',
-            pageSize: '10',
-	    avatar: 'retro'
-        });
-    </script>
-    <!-- Valine ���ۿ� end -->
-  
-</section>
-
-
+            </div>
+        </section>
         </div>
+        <!-- 文章列表   end -->
+        <!-- Main 主要部分 end -->
+        <!-- footer  页码 start-->
+        <footer style="text-align: center; padding-top: 2em;">
+  
+</footer>
+
+        <!-- footer  页码 end-->
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -201,10 +206,11 @@
                 <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
+        <!-- Copyright 版权 end -->
     </div>
+    <!-- Wrapper 外包 e-->
+    <!-- Scripts -->
 </body>
-
-
 
  	
 </html>
