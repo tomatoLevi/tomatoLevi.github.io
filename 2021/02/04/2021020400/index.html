@@ -68,7 +68,7 @@
     <script src="/js/DPlayer.min.js"></script>
     <script src="/js/Meting.min.js"></script>
 	
-<meta name="generator" content="Hexo 4.2.1"><script src="/assets/js/DPlayer.min.js"></script></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
     
 		
 <!-- Layouts -->
@@ -150,12 +150,52 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://wx4.sinaimg.cn/large/cc586804gy1g919ym5kmzj20u00inwia.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Joker🤡</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://ww1.sinaimg.cn/large/cc586804ly1gnbmi3c16pj20v90v9nbn.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >奇淫技巧</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"theme":" #b7daff","screenshot":true,"hotkey":true,"preload":"true","video":{"url":"https://txxs.mahua-yongjiu.com/20191109/2638_d22e6c4f/1000k/hls/index.m3u8","pic":"http://wx4.sinaimg.cn/large/cc586804gy1g919ym5kmzj20u00inwia.jpg"},"danmaku":{"api":"http://dplayer.daoapp.io"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+                <h3 id="奇淫技巧"><a href="#奇淫技巧" class="headerlink" title="奇淫技巧"></a>奇淫技巧</h3><blockquote>
+<p>本文档用于记录一些单独写一个文档不够，但是又蛮有意思的一些东西</p>
+</blockquote>
+<h4 id="动态赋值-RequestMapping"><a href="#动态赋值-RequestMapping" class="headerlink" title="动态赋值@RequestMapping"></a>动态赋值@RequestMapping</h4><blockquote>
+<p>比如我们现在有如下需求：</p>
+<p>同一套代码有两套配置文件，分别对应项目A和B，需要同一个接口</p>
+<p>访问A的时候请求是<code>/testA</code>，访问B的时候请求是<code>/testB</code></p>
+<p>那么这样我们就可以使用<code>#{}</code>来实现这个需求</p>
+</blockquote>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 项目类</span>
+<span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@NoArgsConstructor</span>
+<span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Project</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 项目名字</span>
+    <span class="token keyword">private</span> String pName<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 该项目的其他信息 这里需要new 否则会是null</span>
+    <span class="token keyword">private</span> ProjectInfo info <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ProjectInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 项目信息类</span>
+<span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@NoArgsConstructor</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ProjectInfo</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 这里先默认写死到这里 可自行改成配置文件读取赋值</span>
+    <span class="token keyword">private</span> String url <span class="token operator">=</span> <span class="token string">"/testA"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 同样的方法也可以用于Value注解获取</span>
+<span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"#{project.info.url}"</span><span class="token punctuation">)</span>
+<span class="token keyword">private</span> String urlStr<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// controller中请求可以这么写</span>
+<span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span><span class="token string">"#{project.info.url}"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> ResponseBean <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> ResponseBean<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">"读取成功:"</span><span class="token operator">+</span>urlStr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<blockquote>
+<p>总结：需要<code>Project</code>在容器内，如果多级对象调用，需要有默认无参构造且不为<code>null</code></p>
+</blockquote>
+
             </div>
 
             <!-- Post Comments -->
