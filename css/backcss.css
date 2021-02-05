@@ -29,7 +29,7 @@
 	    left: 0px;
 	    height: 100vh;
 	    width: 100vw;
-	    background: url('http://ww1.sinaimg.cn/large/cc586804ly1gnbnuikcduj247s2dchdt.jpg');
+	    background-image: url("../../images/bg.jpg");
 	    background-position: center center;
 	    background-repeat: no-repeat;
 	    background-size: cover;
