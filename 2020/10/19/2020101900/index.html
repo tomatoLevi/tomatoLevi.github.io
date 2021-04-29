@@ -172,6 +172,31 @@
 <p><a href="https://github.com/alibaba/spring-cloud-alibaba" target="_blank" rel="noopener">https://github.com/alibaba/spring-cloud-alibaba</a></p>
 </blockquote>
 <h4 id="如何整合Nacos"><a href="#如何整合Nacos" class="headerlink" title="如何整合Nacos?"></a>如何整合Nacos?</h4><p>学习最快的方式就是看官方文档啦😊</p>
+<blockquote>
+<p>首先我们需要统一下<code>SpringBoot&amp;SpringCloud&amp;SpringCloudAlibaba</code>版本号，防止出现一些不合常规的问题，以下配置是建立在<code>SpringBoot 2.3.10.RELEASE</code>版本基础上</p>
+</blockquote>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>spring-cloud.version</span><span class="token punctuation">></span></span>Hoxton.SR10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>spring-cloud.version</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>spring-cloud-alibaba.version</span><span class="token punctuation">></span></span>2.2.5.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>spring-cloud-alibaba.version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencyManagement</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-dependencies<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>${spring-cloud.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>import<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span><span class="token punctuation">></span></span>pom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>type</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.alibaba.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-alibaba-dependencies<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>${spring-cloud-alibaba.version}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>import<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span><span class="token punctuation">></span></span>pom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>type</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencyManagement</span><span class="token punctuation">></span></span></code></pre>
 <p>Nacos官方文档地址：</p>
 <blockquote>
 <p><a href="https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/readme.md" target="_blank" rel="noopener">https://github.com/alibaba/spring-cloud-alibaba/blob/master/spring-cloud-alibaba-examples/nacos-example/nacos-discovery-example/readme.md</a></p>
@@ -181,52 +206,91 @@
      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.alibaba.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-starter-alibaba-nacos-discovery<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
-<p>2、在<code>application.properties</code>中配置Nacos的服务地址，也就是Nacos注册中心的地址</p>
-<pre class=" language-properties"><code class="language-properties"><span class="token attr-name"> spring.cloud.nacos.discovery.server-addr</span><span class="token punctuation">=</span><span class="token attr-value">127.0.0.1:8848</span></code></pre>
+<blockquote>
+<p>需要注意的是，如果你使用的是<code>SpringBoot2.4.x</code>版本，因为负载均衡不再是使用<code>ribbon</code>而是使用<code>spring-cloud-loadbalancer</code>，所以我们需要排除<code>ribbon</code>并引入<code>loadbalancer</code>，如果使用的跟我一样是<code>SpringBoot2.3.x</code>版本，则无需这一步</p>
+</blockquote>
+<pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.alibaba.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-starter-alibaba-nacos-discovery<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2021.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusions</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusion</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-starter-netflix-ribbon<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusion</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusions</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-starter-loadbalancer<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>3.0.2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
+<p>2、在<code>application.yml</code>中配置<code>Nacos</code>的服务地址，也就是<code>Nacos</code>注册中心的地址，这里我是在windows中直接通过客户端启动，所以地址为<code>127.0.0.1:8848</code></p>
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">spring</span><span class="token punctuation">:</span>
+<span class="token attr-name">  cloud</span><span class="token punctuation">:</span>
+<span class="token attr-name">    nacos</span><span class="token punctuation">:</span>
+<span class="token attr-name">      discovery</span><span class="token punctuation">:</span>
+<span class="token attr-name">        server-addr</span><span class="token punctuation">:</span> <span class="token attr-value">127.0.0.1:8848</span></code></pre>
 <p>这里我们需要先获取到一个<code>Nacos Server</code>注册中心的服务地址</p>
 <ul>
-<li>在github中下载<code>Nacos Server</code>,建议选择<a href="https://github.com/alibaba/nacos/releases/latest" target="_blank" rel="noopener">Latest release</a>稳定版</li>
+<li>在<code>github</code>中下载<code>Nacos Server</code>,建议选择<a href="https://github.com/alibaba/nacos/releases/latest" target="_blank" rel="noopener">Latest release</a>稳定版</li>
 <li>下载后解压，双击<code>Nacos\bin\startup.bat</code>，就开启了一个<code>Nacos Server</code>，默认端口是在我们本机的<code>8848</code>端口</li>
 </ul>
-<p>3、在启动类上使用<code>@EnableDiscoveryClient</code>注解，开启服务注册与发现功能</p>
-<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@SpringBootApplication</span>
-<span class="token annotation punctuation">@EnableDiscoveryClient</span>
- <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ProviderApplication</span> <span class="token punctuation">{</span>
+<p><img src="http://ww1.sinaimg.cn/large/cc586804ly1gpsi9cgdpaj20xp0hhmym.jpg" alt=""></p>
+<blockquote>
+<p>这里需要注意：</p>
+<p>如果你使用的是1.4.1或更高版本，则默认模式为集群模式</p>
+<p>我们需要打开<code>nacos\bin\startup.bat</code>文件，将如下内容</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token keyword">set</span> MODE<span class="token operator">=</span><span class="token string">"cluster"</span></code></pre>
+<p>修改为单机模式</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token keyword">set</span> MODE<span class="token operator">=</span><span class="token string">"standalone"</span></code></pre>
+</blockquote>
+<p>3、在启动类上使用<code>@EnableDiscoveryClient</code>注解，开启服务注册与发现功能，开启后才能将服务注册到<code>Nacos</code>中，其他服务才能通过接口调用到你提供的服务</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@EnableDiscoveryClient</span>
+<span class="token annotation punctuation">@SpringBootApplication</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CouponApplication</span> <span class="token punctuation">{</span>
 
-     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-         SpringApplication<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>Application<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
-     <span class="token punctuation">}</span>
- <span class="token punctuation">}</span></code></pre>
-<p>4、在<code>application.properties</code>中添加<code>spring.application.name</code>名字，该名字会作为服务名在<code>nacos</code>中显示，例如：</p>
-<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">spring.application.name</span><span class="token punctuation">=</span><span class="token attr-value">service-provider</span></code></pre>
-<p>运行SpringBoot启动类，我们可以在<a href="http://localhost:8848/nacos查看服务是否注册成功，默认登录的账号密码均为`nacos`，登录成功后，在左侧`服务管理-服务列表`中可以查看到注册成功的服务" target="_blank" rel="noopener">http://localhost:8848/nacos查看服务是否注册成功，默认登录的账号密码均为`nacos`，登录成功后，在左侧`服务管理-服务列表`中可以查看到注册成功的服务</a></p>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        SpringApplication<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>CouponApplication<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>4、在<code>application.yml</code>中添加<code>spring.application.name</code>名字，该名字会作为服务名在<code>nacos</code>中显示，例如：</p>
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">spring</span><span class="token punctuation">:</span>
+<span class="token attr-name">  application</span><span class="token punctuation">:</span>
+<span class="token attr-name">    name</span><span class="token punctuation">:</span> <span class="token attr-value">coupon-provider</span></code></pre>
+<p>运行<code>SpringBoot</code>启动类，我们可以在<a href="http://localhost:8848/nacos查看服务是否注册成功，默认登录的账号密码均为`nacos`，登录成功后，在左侧`服务管理-服务列表`中可以查看到注册成功的服务" target="_blank" rel="noopener">http://localhost:8848/nacos查看服务是否注册成功，默认登录的账号密码均为`nacos`，登录成功后，在左侧`服务管理-服务列表`中可以查看到注册成功的服务</a></p>
+<p><img src="http://ww1.sinaimg.cn/large/cc586804ly1gpsie8d6h9j21gv0eo3ze.jpg" alt=""></p>
 <h4 id="OpenFeign远程调用服务"><a href="#OpenFeign远程调用服务" class="headerlink" title="OpenFeign远程调用服务"></a>OpenFeign远程调用服务</h4><p>如果我们想要远程调用服务，我们需要如下几步：</p>
-<p>1、在<code>pom.xml</code>中添加<code>OpenFeign</code>的依赖</p>
+<p>1、在<code>pom.xml</code>中添加<code>OpenFeign</code>的依赖，这里我统一放到<code>common</code>公共模块中统一管理</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-starter-openfeign<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre>
 <p>2、编写一个接口，告诉<code>SpringCloud</code>这个接口需要调用远程服务，并声明接口的每一个方法都是调用哪个远程服务的请求</p>
 <blockquote>
-<p>建议在<code>controller</code>包同级下创建一个<code>feign</code>目录，在<code>feign</code>包路径下创建接口</p>
-<p>例如：我想要在<code>会员服务</code>中调用上<code>订单服务</code>，那么我们就在会员服务中，创建一个<code>OrderFeginService.java</code>接口(接口名字随意起 没有要求)</p>
+<p>建议在<code>controller</code>包同级下创建一个<code>feign</code>目录，在<code>feign</code>包路径下创建Interface接口</p>
+<p>例如：我想要在<code>会员服务</code>中调用上<code>优惠券服务</code>，那么我们就在会员服务中刚刚创建的<code>fegin</code>目录中，创建一个<code>OrderFeginService.java</code>接口(接口名字随意起 没有要求)</p>
 </blockquote>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 给OrderController中添加一个测试接口</span>
-<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/test"</span><span class="token punctuation">)</span>
-<span class="token keyword">public</span> R <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> R<span class="token punctuation">.</span><span class="token function">ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"order"</span><span class="token punctuation">,</span> <span class="token string">"订单服务调用成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 给CouponController中添加一个测试接口 用于给会员服务调用获取优惠券信息</span>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/memberCoupons"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> R <span class="token function">memberCoupons</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    CouponEntity entity <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CouponEntity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    entity<span class="token punctuation">.</span><span class="token function">setCouponName</span><span class="token punctuation">(</span><span class="token string">"满100减50"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> R<span class="token punctuation">.</span><span class="token function">ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"data"</span><span class="token punctuation">,</span> entity<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span>
 <span class="token comment" spellcheck="true">// 表明该接口是一个远程客户端 调用哪个服务就写哪个服务的服务名</span>
-<span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span><span class="token string">"order-provider"</span><span class="token punctuation">)</span>
-<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">OrderFeignService</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/**
-     * 查询列表
-     */</span>
-    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/order/order/test"</span><span class="token punctuation">)</span>
-    R <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span><span class="token string">"coupon-provider"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">CouponFeginService</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"coupon/coupon/memberCoupons"</span><span class="token punctuation">)</span>
+    R <span class="token function">memberCoupons</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>3、在启动类上开启远程调用功能注解支持<code>@EnableFeignClients</code>，并标注<code>feign</code>所在的包</p>
+<blockquote>
+<p>需要注意的是：这里通过<code>@FeignClient</code>标注你调用的是哪个服务，其中的<code>coupon-provider</code>是对应服务在<code>yml</code>中配置的<code>spring.application.name</code>的名称</p>
+<p>同时需要注意，接口需要与服务中的接口保持一致，且调用路径需要写全路径，即如果你在<code>Controller</code>中标注了统一的路径，也需要一起加到地址中，否则会提示无法找到</p>
+</blockquote>
+<p>3、在启动类上开启远程调用功能注解支持<code>@EnableFeignClients</code>，默认扫描的是当前所在工程目录下标注了<code>@FeginClient</code>的接口，也可以<code>basePackages</code>标注<code>feign</code>所在的包</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@EnableFeignClients</span><span class="token punctuation">(</span>basePackages <span class="token operator">=</span> <span class="token string">"com.atguigu.gulimall.member.feign"</span><span class="token punctuation">)</span>
 <span class="token annotation punctuation">@EnableDiscoveryClient</span>
 <span class="token annotation punctuation">@SpringBootApplication</span>
@@ -236,22 +300,20 @@
         SpringApplication<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>GulimallMemberApplication<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p>4、在<code>MemberController</code>中注入刚刚编写的接口<code>OrderFeignService</code>，并编写测试方法调用<code>OrderController</code>中的测试方法</p>
+<p>4、在<code>MemberController</code>中注入刚刚编写的接口<code>CouponFeginService</code>，并编写测试方法调用<code>CouponController</code>中的测试方法</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Autowired</span>
-<span class="token keyword">private</span> OrderFeignService orderFeignService<span class="token punctuation">;</span>
+<span class="token keyword">private</span> CouponFeginService feginService<span class="token punctuation">;</span>
 
 <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/test"</span><span class="token punctuation">)</span>
-<span class="token keyword">public</span> R <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    R r <span class="token operator">=</span> orderFeignService<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> r<span class="token punctuation">;</span>
+<span class="token keyword">public</span> R <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> feginService<span class="token punctuation">.</span><span class="token function">memberCoupons</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>5、依次启动<code>订单服务</code>与<code>会员服务</code>，浏览器调用会员服务接口地址，请换成你们自己的端口</p>
+<p>5、依次启动<code>优惠券服务</code>与<code>会员服务</code>，浏览器调用会员服务接口地址，请换成你们自己的端口</p>
 <blockquote>
-<p><a href="http://localhost:9020/member/member/test" target="_blank" rel="noopener">http://localhost:9020/member/member/test</a></p>
+<p><a href="http://localhost:8000/member/member/test" target="_blank" rel="noopener">http://localhost:8000/member/member/test</a></p>
 </blockquote>
 <p>浏览器响应结果如下：</p>
-<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span><span class="token property">"msg"</span><span class="token operator">:</span><span class="token string">"success"</span><span class="token punctuation">,</span><span class="token property">"code"</span><span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token property">"order"</span><span class="token operator">:</span><span class="token string">"订单服务调用成功"</span><span class="token punctuation">}</span></code></pre>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span><span class="token property">"msg"</span><span class="token operator">:</span><span class="token string">"success"</span><span class="token punctuation">,</span><span class="token property">"code"</span><span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token property">"data"</span><span class="token operator">:</span><span class="token punctuation">{</span><span class="token property">"couponName"</span><span class="token operator">:</span><span class="token string">"满100减50"</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>
 <p>到此为止，我们就成功从<code>会员服务</code>调用到了<code>订单服务</code></p>
 <h4 id="为什么要接入Nacos-Config"><a href="#为什么要接入Nacos-Config" class="headerlink" title="为什么要接入Nacos Config"></a>为什么要接入Nacos Config</h4><p>如果我们的代码中有一部分是从配置文件中读取的，每次修改后都需要重新打包项目在进行调用接口才能看到效果，如果我们部署了很多台机器，每次这样重新修改打包后在发布调用是很繁琐的</p>
 <h4 id="如何接入Nacos-Config作为配置中心"><a href="#如何接入Nacos-Config作为配置中心" class="headerlink" title="如何接入Nacos Config作为配置中心"></a>如何接入Nacos Config作为配置中心</h4><p>1、在<code>pom.xml</code>中引入<code>Nacos Config Starter</code></p>
@@ -265,22 +327,28 @@
 <p>3、在调用了配置文件的<code>Controller</code>类上，使用<code>@RefreshScope</code>注解来动态刷新配置文件，配合<code>@Value</code>来获取配置文件中的值，配置中心有的，优先使用配置中心</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@RefreshScope</span>
 <span class="token annotation punctuation">@RestController</span>
-<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"order/order"</span><span class="token punctuation">)</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OrderController</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${user.name}"</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
-    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${user.age}"</span><span class="token punctuation">)</span>
-    <span class="token keyword">private</span> Integer age<span class="token punctuation">;</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span></code></pre>
+<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"coupon/coupon"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CouponController</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${coupon.name}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String couponName<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/memberCoupons"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> R <span class="token function">memberCoupons</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        CouponEntity entity <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CouponEntity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        entity<span class="token punctuation">.</span><span class="token function">setCouponName</span><span class="token punctuation">(</span>couponName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> R<span class="token punctuation">.</span><span class="token function">ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"data"</span><span class="token punctuation">,</span> entity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 <p>4、之后打开<code>Nacos Server</code>，依次点开左侧<code>配置管理</code>节点下的<code>配置列表</code>，点击右上方➕添加一条配置</p>
+<p><img src="http://ww1.sinaimg.cn/large/cc586804ly1gpsih7kvbkj21h10gpjsg.jpg" alt=""></p>
 <blockquote>
 <p><code>Data ID</code>：为<code>spring.application.name</code>加上<code>properties</code>，即<code>xxxx.properties</code></p>
-<p>如按照上方配置，则为<code>nacos-config-example.properties</code></p>
+<p>如按照上方配置，则为<code>coupon-provider.properties</code></p>
 <p><code>Group</code>：默认即可<code>DEFAULT_GROUP</code>，也可以自行输入其他名字分组，例如：1111、618等节日</p>
-<p><code>配置格式</code>：这里我选择properties</p>
-<p><code>配置内容</code>：根据选择的配置格式进行编写，例如：user.name=Homra</p>
+<p><code>配置格式</code>：YAML配置后没获取到，可能需要手动指定YAML格式，这里我选择properties</p>
+<p><code>配置内容</code>：根据选择的配置格式进行编写，例如：coupon.name=满100-80</p>
 </blockquote>
-<p>5、编写完成后，点击发布即可，以后每次修改后都要重新发布，无需重启项目即可看见修改后的值</p>
+<p><img src="http://ww1.sinaimg.cn/large/cc586804ly1gpsijb56j9j21af0li0t3.jpg" alt=""></p>
+<p>5、编写完成后，点击发布即可，以后想要修改值的时候，只需要在<code>nacos</code>配置中心中修改配置内容即可，而无需重新启动项目即可看到修改后的值</p>
 <h4 id="Nacos-Config相关细节"><a href="#Nacos-Config相关细节" class="headerlink" title="Nacos Config相关细节"></a>Nacos Config相关细节</h4><h5 id="1、命名空间：配置隔离"><a href="#1、命名空间：配置隔离" class="headerlink" title="1、命名空间：配置隔离"></a>1、命名空间：配置隔离</h5><blockquote>
 <p>默认新增的所有配置都在public命名空间中</p>
 <p>如果将来存在多个配置环境，例如：开发、测试、生产环境</p>
@@ -295,6 +363,8 @@
 </li>
 </ul>
 <pre class=" language-properties"><code class="language-properties"><span class="token attr-name">spring.cloud.nacos.config.namespace</span><span class="token punctuation">=</span><span class="token attr-value">e6ad418d-65b6-4a46-9d73-1ccde42240af</span></code></pre>
+<p><img src="http://ww1.sinaimg.cn/large/cc586804ly1gpsipkbkpyj21h00immxz.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/cc586804ly1gpsiqdebezj21b007rq30.jpg" alt=""></p>
 <h5 id="2、配置集"><a href="#2、配置集" class="headerlink" title="2、配置集"></a>2、配置集</h5><blockquote>
 <p>一组相关或不相关配置项的集合就叫配置集</p>
 </blockquote>
@@ -328,8 +398,8 @@
 </blockquote>
 <p>我们可以在官方手册中找到大量的<code>predicate</code>或者<code>filter</code>规则，可以直接根据示例进行配置</p>
 <blockquote>
-<p><a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/2.2.3.RELEASE/reference/html/#gateway-request-predicates-factories" target="_blank" rel="noopener">https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/2.2.3.RELEASE/reference/html/#gateway-request-predicates-factories</a></p>
-<p><a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/2.2.3.RELEASE/reference/html/#gatewayfilter-factories" target="_blank" rel="noopener">https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/2.2.3.RELEASE/reference/html/#gatewayfilter-factories</a></p>
+<p><a href="https://docs.spring.io/spring-cloud-gateway/docs/2.2.7.RELEASE/reference/html/#gateway-request-predicates-factories" target="_blank" rel="noopener">https://docs.spring.io/spring-cloud-gateway/docs/2.2.7.RELEASE/reference/html/#gateway-request-predicates-factories</a></p>
+<p><a href="https://docs.spring.io/spring-cloud-gateway/docs/2.2.7.RELEASE/reference/html/#gatewayfilter-factories" target="_blank" rel="noopener">https://docs.spring.io/spring-cloud-gateway/docs/2.2.7.RELEASE/reference/html/#gatewayfilter-factories</a></p>
 </blockquote>
 <h4 id="整合Spring-Cloud-GateWay网关"><a href="#整合Spring-Cloud-GateWay网关" class="headerlink" title="整合Spring Cloud GateWay网关"></a>整合Spring Cloud GateWay网关</h4><p>1、新建<code>SpringBoot</code>项目或<code>Maven</code>项目，导入<code>GateWay</code>相关<code>starter</code>依赖</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
@@ -346,18 +416,18 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
 <p>3、在<code>application.yml</code>配置<code>nacos</code>的服务注册地址、应用名及服务端口</p>
-<pre class=" language-yml"><code class="language-yml">spring:
+<pre class=" language-yml"><code class="language-yml">server:
+  port: 88
+spring:
+  application:
+    name: gateway-provider
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
-  application:
-    name: gulimall-gateway
-server:
-  port: 88</code></pre>
+        server-addr: 127.0.0.1:8848</code></pre>
 <p>4、在<code>bootstrap.properties</code>中配置<code>nacos</code>的配置中心地址</p>
 <pre class=" language-properties"><code class="language-properties"><span class="token attr-name">spring.cloud.nacos.config.server-addr</span><span class="token punctuation">=</span><span class="token attr-value">localhost:8848</span></code></pre>
-<p>5、因为我们还依赖了公共模块<code>common</code>，其中有对<code>MyBatis</code>的引用，所以我们在启动类中排除对<code>DataSource</code>的配置操作</p>
+<p>5、因为我们还依赖了公共模块<code>common</code>，其中有对<code>MyBatis</code>的引用，启动的时候会提示我们去<code>yml</code>中添加数据源相关的配置，所以我们在启动类中排除对<code>DataSource</code>的配置操作</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@EnableDiscoveryClient</span>
 <span class="token comment" spellcheck="true">// 排除对DataSource的相关自动配置操作</span>
 <span class="token annotation punctuation">@SpringBootApplication</span><span class="token punctuation">(</span>exclude <span class="token operator">=</span> <span class="token punctuation">{</span>DataSourceAutoConfiguration<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -374,7 +444,7 @@ server:
 <p>那么我们需要在<code>yml</code>文件中增加如下配置</p>
 <blockquote>
 <p>详情可参考官方手册<code>query-route-predicate-factory</code>部分讲解</p>
-<p><a href="https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/2.2.3.RELEASE/reference/html/#the-query-route-predicate-factory" target="_blank" rel="noopener">https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/2.2.3.RELEASE/reference/html/#the-query-route-predicate-factory</a></p>
+<p><a href="https://docs.spring.io/spring-cloud-gateway/docs/2.2.7.RELEASE/reference/html/#the-query-route-predicate-factory" target="_blank" rel="noopener">https://docs.spring.io/spring-cloud-gateway/docs/2.2.7.RELEASE/reference/html/#the-query-route-predicate-factory</a></p>
 </blockquote>
 <pre class=" language-yml"><code class="language-yml">spring:
   cloud:
@@ -388,7 +458,7 @@ server:
           uri: https://www.qq.com
           predicates:
             - Query=url,qq</code></pre>
-<p><code>Query</code>后第一个值表示<code>查询参数名</code>，第二个值可以写字符串，且支持正则表达式匹配规则</p>
+<p><code>Query</code>后第一个值表示<code>查询参数名</code>，第二个值可以写字符串，且支持正则表达式匹配规则，表示对应参数的值，如果匹配到参数未url且值为指定值的时候，就会跳转到配置的uri地址</p>
 <p>所以如上配置后，我们在浏览器发送不同的请求就会来到不同的页面</p>
 <p>例如：</p>
 <ul>
