@@ -7,6 +7,7 @@ import initLazyLoad from "./layouts/lazyload.js";
 import { initTOC } from "./layouts/toc.js";
 import { navbarShrink } from "./layouts/navbarShrink.js";
 import initMasonry from "./plugins/masonry.js";
+import initRecipes from "./layouts/recipes.js";
 import initMermaid from "./plugins/mermaid.js";
 import initPangu from "./plugins/pangu.js";
 import initTabs from "./plugins/tabs.js";
@@ -105,7 +106,9 @@ const initPage = () => {
   safeRun("imageViewer", () => {
     initImageViewer({ signal: pageSignal, appSignal });
   });
-
+ safeRun("recipes", () => {
+    initRecipes();
+  });
   navbarShrink.setNavigating(false);
   navbarShrink.refresh();
 
